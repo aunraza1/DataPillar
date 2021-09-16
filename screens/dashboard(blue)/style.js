@@ -183,17 +183,14 @@ const styles = StyleSheet.create({
     },
     estimatedTimes: {
         width: width * 0.90,
-        top: 200,
+        marginTop:20,
         height: 173,
-        left: 17,
         backgroundColor: '#FFFFFF',
         borderRadius: 13,
     },
     btnCurrent: {
         width: 100.18,
         height: 30,
-        top: 15,
-        left: 60,
         backgroundColor: '#E2E2E2',
         borderWidth: 1,
         borderBottomStartRadius: 24,
@@ -203,8 +200,6 @@ const styles = StyleSheet.create({
     btnNext: {
         width: 100.18,
         height: 30,
-        top: 15,
-        left: 60,
         backgroundColor: '#E2E2E2',
         borderWidth: 1,
         borderBottomEndRadius: 24,
@@ -216,8 +211,8 @@ const styles = StyleSheet.create({
         width: 74.41,
         height: 14,
         textAlign: 'center',
-        left: 7,
-        top: 5,
+        marginTop:5,
+        marginLeft:4,
         fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: '500',
@@ -232,8 +227,7 @@ const styles = StyleSheet.create({
         width: 74.41,
         height: 14,
         textAlign: 'center',
-        left: 7,
-        top: 5,
+        marginTop:6,
         fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: '500',
@@ -246,54 +240,52 @@ const styles = StyleSheet.create({
     },
     content: {
         height: 14,
-        textAlign: 'center',
-        top: 20,
         fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: '500',
         fontSize: 14,
         lineHeight: 14,
         display: 'flex',
-        alignItems: 'center',
     },
     matterContainer: {
         height: 65,
         borderBottomWidth: 1,
-        borderColor: '#EBEBEB'
+        borderColor: '#EBEBEB',
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
     },
     add:{
         backgroundColor:'#114BDF',
         borderRadius:15,
         width:72,
         height:30,
-        left:80,
-        top:10
     },
     save:{
         backgroundColor:'#2DB954',
         borderRadius:15,
         width:72,
-        height:30,
-        left:90,
-        top:10
+        height:30, 
+        marginLeft:10
+
     },
     addText:{
-        height: 14,
+        height: 20,
+        marginTop:5,
         textAlign: 'center',
-        top: 10,
         fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: '500',
         fontSize: 14,
         lineHeight: 14,
         display: 'flex',
-        alignItems: 'center',
         color:"#FFFFFF"
     },
     saveText:{
-        height: 14,
+        height: 20,
+        marginTop:5,
         textAlign: 'center',
-        top: 10,
         fontFamily: 'Roboto',
         fontStyle: 'normal',
         fontWeight: '500',
@@ -302,8 +294,75 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         color:"#FFFFFF"
+    },
+    estimatedTimesTxt:{
+        fontSize: 18,
+         fontWeight: 'bold',
+         marginTop:10
+    },
+    CurrentNext:{
+        display: 'flex',
+         flexDirection: 'row', 
+         justifyContent:'center',
+         alignItems:'center', 
+         height: 60,
+          borderBottomWidth: 1,
+           borderColor: '#EBEBEB' 
+    },
+    addSave:{
+        display: 'flex', 
+        flexDirection: 'row',
+         justifyContent:'center',
+         height:50,
+         alignItems:'center'
+    },
+    cardContainer:{
+        display:'flex',
+        flexDirection:'row',
+        backgroundColor:'#FFEEDA',
+        borderRadius:13,
+        height:50,
+        marginLeft:9,
+        marginTop:15,
+
+    },
+    cardTxt:{
+        justifyContent:'space-evenly',
+        marginLeft:10,
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    namesTxt:{
+        height: 16,
+        width:120,
+        marginTop:5,
+        textAlign: 'center',
+        fontFamily: 'Roboto',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 14,
+        lineHeight: 16,
+        display: 'flex',
+        alignItems: 'center',
+        color:"#000000"
+    },
+    circle2:{
+        marginTop:5,
+        height:14,
+        width:14,
+        borderRadius:7,
+        backgroundColor:"#FF7A00"
+    },
+    vector15:{
+        width: 5.75,
+        height: 11.5,
+        borderStyle:'solid',
+        borderWidth:1.6428,
+        transform:[{rotate: "100deg" }]
+
 
     }
+  
 
 
 })

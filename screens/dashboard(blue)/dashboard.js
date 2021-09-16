@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, Image, TouchableOpacity, ScrollView ,FlatList} from 'react-native'
 import styles from './style'
 
 
 function Dashboard() {
     return (
-
-        <ScrollView style={styles.container}>
+   
+        <View style={styles.container}>
             <View style={styles.quickStart}>
                 <View style={styles.profileCard}>
                     <View style={styles.rectangle11}>
@@ -62,12 +62,12 @@ function Dashboard() {
                     </View>
                 </View>
             </View>
-            {/* <View>
-                    <Text style={{ top: 190, left: 30, fontSize: 18, fontWeight: 'bold' }}>Estimated times</Text>
+                <View>
+                    <Text style={styles.estimatedTimesTxt}>Estimated times</Text>
                 </View>
                 <View style={styles.estimatedTimes}>
 
-                    <View style={{ display: 'flex', flexDirection: 'row', height: 60, borderBottomWidth: 1, borderColor: '#EBEBEB' }}>
+                    <View style={styles.CurrentNext}>
 
                         <TouchableOpacity style={styles.btnCurrent}>
                             <Text style={styles.textCurrent}>Current Week</Text>
@@ -79,7 +79,7 @@ function Dashboard() {
                     <View style={styles.matterContainer} >
                         <Text style={styles.content}>No Matters Added</Text>
                     </View>
-                    <View style={{ display: 'flex', flexDirection: 'row' }}>
+                    <View style={styles.addSave}>
 
                         <TouchableOpacity style={styles.add}>
                             <Text style={styles.addText}>Add</Text>
@@ -89,9 +89,26 @@ function Dashboard() {
 
                         </TouchableOpacity>
                     </View>
-                </View>  */}
+                </View> 
+           <FlatList
+           data={[1,2,3,4,5,6,7]}
+           keyExtractor={item => item}
+           renderItem={()=>(
+            <View style={styles.cardContainer}>
+            <View style={styles.cardTxt}>
+                <Text style={styles.namesTxt}>Amanda Giles</Text>
+            </View>
+            <View style={styles.cardTxt}>
+                <Text style={styles.namesTxt}>40.0h/ 100.0%</Text>
+                <View style={styles.circle2}></View>
+            </View>    
 
-        </ScrollView>
+        </View>
+           )}
+           
+           />
+            </View>
+     
 
     )
 
